@@ -8,6 +8,7 @@
 In times of crisis, seamless and reliable communication is a fundamental necessity. Natural disasters, conflicts, and internet blackouts often hinder law enforcement agencies, relief organizations, and the general public from coordinating effectively. Traditional networks fail during such emergencies due to their reliance on 
 centralized infrastructure, making it imperative to develop an alternative system that ensures connectivity 
 under extreme conditions. 
+
 The proposed Emergency Communication and Content Regulation System (ECCRS) is a multi-layered 
 hybrid network designed to provide uninterrupted communication, verified emergency alerts, and limited but 
 essential internet services in the absence of traditional ISPs. This system integrates portable routers, 
@@ -82,10 +83,10 @@ This repository contains:
 - **MySQL / PostgreSQL** (For Database Storage)
 
 **💻 Installation Steps**
-1️⃣ Clone the repository
+1️⃣ Clone the repository 
 2️⃣ Install dependencies
 3️⃣ Setup database
-4️⃣ Run simulations
+4️⃣ Run simulations 
 5️⃣ Deploy Grafana Dashboard
 
 📌 **Contributing**
@@ -103,4 +104,4 @@ We welcome contributions! If you want to improve this project:
 - Expand ECCRS with **LEO Satellites, 6G and AI-powered Smart Crisis Response Systems**.
 - Integration with **National Digital Infrastructure** for scalability.
 
-📌 **Maintainer**: Roushan Raj, Ritika Kumari, Aditya Raj, Rishita Raj | ✉️ **Contact**: roushanraj6641@gmail.com, ritikakumari2910@gmail.com, adityacool3654@gmail.com, rishitaraj1855@gmail.com 
+📌 **Maintainers**: Roushan Raj, Ritika Kumari, Aditya Raj, Rishita Raj | ✉️ **Contact**: roushanraj6641@gmail.com, ritikakumari2910@gmail.com, adityacool3654@gmail.com, rishitaraj1855@gmail.com 
