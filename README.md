@@ -27,6 +27,7 @@ This repository contains:
 ```plaintext
 📦 Dare to Dream 5.0
 ├── 💻 Code/
+│   ├── requirements.txt
 │   ├── simulations.ipynb
 │   │   ├── Dashboard/
 │   │   │   ├── grafana_dashboard.json      # Grafana config for real-time monitoring
@@ -40,14 +41,19 @@ This repository contains:
 │   |   |   |   ├── network_usage.json
 ├── 🗺️ Flowcharts/
 │   ├── AI Based alert verification.png
-│   ├── AI Verification.png
+│   ├── AI Based alert verification.puml.txt
+│   ├── AI Verification.jpg
 │   ├── AI.svg
 │   ├── Architecture.jpg
-│   ├── AI Based alert verification.png
-│   ├── BERT-embedding-output.png
+│   ├── Architecture.puml.txt
+│   ├── BERT-embedding-output.jpg
+│   ├── Citizen Alert Flow.puml.txt
 |   ├── Device connection and signal switching.png
+|   ├── Device connection and signal switching.puml.txt
 |   ├── Emergency Network Scalability.png
+|   ├── Emergency Network Scalability.puml.txt
 |   ├── Government Privilege Management.png
+|   ├── GovernmentControl.puml.txt
 |   ├── Xceptionet.png
 ├── README.md                    # This file
 ```
@@ -76,10 +82,10 @@ This repository contains:
 - **MySQL / PostgreSQL** (For Database Storage)
 
 **💻 Installation Steps**
-1️⃣ Clone the repository:
-2️⃣ Install dependencies:
-3️⃣ Setup database:
-4️⃣ Run simulations:
+1️⃣ Clone the repository
+2️⃣ Install dependencies
+3️⃣ Setup database
+4️⃣ Run simulations
 5️⃣ Deploy Grafana Dashboard
 
 📌 **Contributing**
