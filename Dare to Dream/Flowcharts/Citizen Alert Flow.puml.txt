@@ -1,0 +1,20 @@
+@startuml
+skinparam dpi 150
+title Citizen Alert Flow (Closed-Loop Communication)
+
+actor Citizen
+participant "Mesh Node" as Mesh
+participant "AI Verification" as AI
+participant "CrisisCommand Dashboard" as Dashboard
+participant "Law Enforcement" as Police
+participant "Relief Agency" as Relief
+
+Citizen -> Mesh : Send Alert (Text/Image/Video)
+Mesh -> AI : Validate & Authenticate
+AI -> Dashboard : Send Verified Alert
+Dashboard -> Police : Forward Emergency Alert
+Dashboard -> Relief : Forward to Relief Teams
+Police -> Citizen : Confirm Dispatch Status
+Relief -> Citizen : Provide Assistance Info
+
+@enduml

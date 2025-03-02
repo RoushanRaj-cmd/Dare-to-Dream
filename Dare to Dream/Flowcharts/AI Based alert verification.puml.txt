@@ -1,0 +1,27 @@
+@startuml
+skinparam dpi 150
+title AI-Based Alert Verification Process
+
+actor Citizen
+participant "SafeAlert App" as App
+participant "AI Verification Engine" as AI
+participant "Blockchain Digital ID" as Blockchain
+participant "Geo-Data Cross-Check" as GeoCheck
+participant "Content Filtering" as Filter
+participant "CrisisCommand Dashboard" as Dashboard
+
+Citizen -> App : Send Alert (Text/Video/Image)
+App -> Blockchain : Verify User Identity
+Blockchain -> AI : Validate Alert Authenticity
+AI -> GeoCheck : Cross-Check Geolocation Data
+AI -> Filter : Scan for Fake Content / Deepfakes
+Filter -> AI : Verify Content Integrity
+AI -> Dashboard : Send Verified Alert
+
+alt "If Alert is Fake"
+    Dashboard -> Citizen : Reject Alert & Notify User
+else "If Alert is Genuine"
+    Dashboard -> "Relief & Law Enforcement" : Forward Verified Alert
+end
+
+@enduml

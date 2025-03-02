@@ -1,0 +1,33 @@
+@startuml
+skinparam dpi 150
+title Device Connection & Signal Switching Process
+
+start
+:Device Scans for Available Mesh Nodes;
+:Measure Signal Strength (RSSI) for Each Node;
+:Check Load on Each Node;
+
+if (Is the Nearest Node Overloaded?) then (Yes)
+    :Search for Next Strongest Signal Node;
+    if (Alternative Node Available?) then (Yes)
+        :Connect to Alternative Node;
+    else (No)
+        :Attempt Direct Connection to VSAT or Microwave Link;
+    endif
+else (No)
+    :Connect to Strongest Available Mesh Node;
+endif
+
+:Monitor Connection Quality & Load;
+if (Connection Quality Drops Below Threshold?) then (Yes)
+    :Initiate Handover to Stronger Node;
+    :Repeat Signal Strength Measurement;
+    :Switch Connection if Needed;
+else (No)
+    :Continue Using Current Node;
+endif
+
+:Device Remains Connected & Data is Transmitted;
+stop
+
+@enduml

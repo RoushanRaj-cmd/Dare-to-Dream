@@ -1,0 +1,21 @@
+@startuml
+skinparam dpi 150
+title Government Control & Privilege Management
+
+rectangle "CrisisCommand Dashboard" {
+    rectangle "Role-Based Access Control" as RBAC
+    rectangle "Dynamic Bandwidth Allocation" as Bandwidth
+    rectangle "Content Filtering Engine" as ContentFilter
+}
+
+rectangle "Mesh Network Nodes" as Mesh {
+    rectangle "Emergency Channel (Full Access)" as Emergency
+    rectangle "Limited Internet (Restricted Access)" as Limited
+    rectangle "Blackout Mode (Critical Services Only)" as Blackout
+}
+
+RBAC -> Mesh : Grant Access Based on Authority
+Bandwidth -> Mesh : Allocate Resources Dynamically
+ContentFilter -> Mesh : Apply Restrictions on Harmful Content
+
+@enduml

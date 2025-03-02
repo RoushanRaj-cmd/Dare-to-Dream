@@ -1,0 +1,24 @@
+@startuml
+skinparam dpi 150
+title Emergency Network Expansion & Scalability
+
+rectangle "Urban Connectivity Layer" {
+    rectangle "Fixed Mesh Nodes (10km range)" as UrbanMesh
+}
+
+rectangle "Emergency Deployment Layer" {
+    rectangle "Portable Cell Towers (PCTs)" as PCT
+    rectangle "Cell on Wheels (CoW)" as CoW
+}
+
+rectangle "Long-Distance Backbone" {
+    rectangle "VSAT Uplinks" as VSAT
+    rectangle "Microwave Links (50km)" as Microwave
+}
+
+UrbanMesh -> PCT : Expand Coverage in Emergency
+PCT -> CoW : Deploy Temporary Networks
+CoW -> VSAT : Connect to Long-Distance Backbone
+VSAT -> Microwave : Enable High-Bandwidth Backhaul
+
+@enduml

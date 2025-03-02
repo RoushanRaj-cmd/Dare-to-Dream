@@ -1,0 +1,1458 @@
+{
+  "__inputs": [
+    {
+      "name": "DS_YESOREYERAM-INFINITY-DATASOURCE",
+      "label": "yesoreyeram-infinity-datasource",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "yesoreyeram-infinity-datasource",
+      "pluginName": "Infinity"
+    },
+    {
+      "name": "DS_MYSQL-3",
+      "label": "mysql-3",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "mysql",
+      "pluginName": "MySQL"
+    }
+  ],
+  "__elements": {},
+  "__requires": [
+    {
+      "type": "panel",
+      "id": "barchart",
+      "name": "Bar chart",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "gauge",
+      "name": "Gauge",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "geomap",
+      "name": "Geomap",
+      "version": ""
+    },
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "11.5.1"
+    },
+    {
+      "type": "panel",
+      "id": "heatmap",
+      "name": "Heatmap",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "logs",
+      "name": "Logs",
+      "version": ""
+    },
+    {
+      "type": "datasource",
+      "id": "mysql",
+      "name": "MySQL",
+      "version": "11.5.0-pre"
+    },
+    {
+      "type": "panel",
+      "id": "piechart",
+      "name": "Pie chart",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "stat",
+      "name": "Stat",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "table",
+      "name": "Table",
+      "version": ""
+    },
+    {
+      "type": "panel",
+      "id": "timeseries",
+      "name": "Time series",
+      "version": ""
+    },
+    {
+      "type": "datasource",
+      "id": "yesoreyeram-infinity-datasource",
+      "name": "Infinity",
+      "version": "3.0.0-beta.1"
+    }
+  ],
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "${DS_YESOREYERAM-INFINITY-DATASOURCE}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "severity"
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 18,
+        "x": 0,
+        "y": 0
+      },
+      "id": 9,
+      "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto"
+      },
+      "pluginVersion": "11.5.1",
+      "targets": [
+        {
+          "columns": [],
+          "data": "[\n    {\n        \"timestamp\":1738368000000,\n        \"connected_smartphones\":30,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368060000,\n        \"connected_smartphones\":31,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368120000,\n        \"connected_smartphones\":32,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368180000,\n        \"connected_smartphones\":33,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368240000,\n        \"connected_smartphones\":34,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368300000,\n        \"connected_smartphones\":35,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368360000,\n        \"connected_smartphones\":36,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368420000,\n        \"connected_smartphones\":37,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368480000,\n        \"connected_smartphones\":38,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368540000,\n        \"connected_smartphones\":39,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368600000,\n        \"connected_smartphones\":30,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368660000,\n        \"connected_smartphones\":31,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368720000,\n        \"connected_smartphones\":32,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368780000,\n        \"connected_smartphones\":33,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368840000,\n        \"connected_smartphones\":34,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368900000,\n        \"connected_smartphones\":35,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368960000,\n        \"connected_smartphones\":36,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369020000,\n        \"connected_smartphones\":37,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369080000,\n        \"connected_smartphones\":38,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369140000,\n        \"connected_smartphones\":39,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369200000,\n        \"connected_smartphones\":30,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369260000,\n        \"connected_smartphones\":31,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369320000,\n        \"connected_smartphones\":32,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369380000,\n        \"connected_smartphones\":33,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369440000,\n        \"connected_smartphones\":34,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369500000,\n        \"connected_smartphones\":35,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369560000,\n        \"connected_smartphones\":36,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369620000,\n        \"connected_smartphones\":37,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369680000,\n        \"connected_smartphones\":38,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369740000,\n        \"connected_smartphones\":39,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369800000,\n        \"connected_smartphones\":30,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369860000,\n        \"connected_smartphones\":31,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369920000,\n        \"connected_smartphones\":32,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369980000,\n        \"connected_smartphones\":33,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370040000,\n        \"connected_smartphones\":34,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370100000,\n        \"connected_smartphones\":35,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370160000,\n        \"connected_smartphones\":36,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370220000,\n        \"connected_smartphones\":37,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370280000,\n        \"connected_smartphones\":38,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370340000,\n        \"connected_smartphones\":39,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370400000,\n        \"connected_smartphones\":30,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370460000,\n        \"connected_smartphones\":31,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370520000,\n        \"connected_smartphones\":32,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370580000,\n        \"connected_smartphones\":33,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370640000,\n        \"connected_smartphones\":34,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370700000,\n        \"connected_smartphones\":35,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370760000,\n        \"connected_smartphones\":36,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370820000,\n        \"connected_smartphones\":37,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370880000,\n        \"connected_smartphones\":38,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370940000,\n        \"connected_smartphones\":39,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    }\n]",
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "${DS_YESOREYERAM-INFINITY-DATASOURCE}"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "",
+          "source": "inline",
+          "type": "json",
+          "url": "",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "device connection",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "${DS_MYSQL-3}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "signal_strength"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "from": 50,
+                      "result": {
+                        "color": "semi-dark-orange",
+                        "index": 0
+                      },
+                      "to": 80
+                    },
+                    "type": "range"
+                  },
+                  {
+                    "options": {
+                      "from": 0,
+                      "result": {
+                        "color": "dark-red",
+                        "index": 1
+                      },
+                      "to": 50
+                    },
+                    "type": "range"
+                  },
+                  {
+                    "options": {
+                      "from": 80,
+                      "result": {
+                        "color": "semi-dark-green",
+                        "index": 2
+                      },
+                      "to": 1000
+                    },
+                    "type": "range"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "alert_queue"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "from": 0,
+                      "result": {
+                        "color": "dark-green",
+                        "index": 0
+                      },
+                      "to": 2
+                    },
+                    "type": "range"
+                  },
+                  {
+                    "options": {
+                      "from": 3,
+                      "result": {
+                        "color": "semi-dark-yellow",
+                        "index": 1
+                      },
+                      "to": 5
+                    },
+                    "type": "range"
+                  },
+                  {
+                    "options": {
+                      "from": 5,
+                      "result": {
+                        "color": "dark-red",
+                        "index": 2
+                      },
+                      "to": 10
+                    },
+                    "type": "range"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 18,
+        "y": 0
+      },
+      "id": 5,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "11.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "${DS_MYSQL-3}"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT signal_strength\r\nFROM system_status\r\nORDER BY timestamp DESC\r\nLIMIT 1;\r\n \r\n\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        },
+        {
+          "dataset": "dashboard",
+          "datasource": {
+            "type": "mysql",
+            "uid": "${DS_MYSQL-3}"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "hide": false,
+          "rawQuery": true,
+          "rawSql": " SELECT alert_queue\r\nFROM system_status\r\nORDER BY timestamp DESC\r\nLIMIT 1;",
+          "refId": "B",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "System Status",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "${DS_YESOREYERAM-INFINITY-DATASOURCE}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "scaleDistribution": {
+              "type": "linear"
+            }
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 24,
+        "x": 0,
+        "y": 4
+      },
+      "id": 10,
+      "options": {
+        "calculate": false,
+        "cellGap": 3,
+        "color": {
+          "exponent": 0.5,
+          "fill": "dark-orange",
+          "min": -8,
+          "mode": "scheme",
+          "reverse": false,
+          "scale": "exponential",
+          "scheme": "PuBuGn",
+          "steps": 73
+        },
+        "exemplars": {
+          "color": "rgba(255,0,255,0.7)"
+        },
+        "filterValues": {
+          "le": 1e-9
+        },
+        "legend": {
+          "show": true
+        },
+        "rowsFrame": {
+          "layout": "auto"
+        },
+        "tooltip": {
+          "mode": "single",
+          "showColorScale": false,
+          "yHistogram": false
+        },
+        "yAxis": {
+          "axisPlacement": "left",
+          "reverse": false
+        }
+      },
+      "pluginVersion": "11.5.1",
+      "targets": [
+        {
+          "columns": [],
+          "data": "[\n    {\n        \"timestamp\":1738368000000,\n        \"bandwidth_usage_mbps\":50,\n        \"active_devices\":10,\n        \"latency_ms\":20\n    },\n    {\n        \"timestamp\":1738368060000,\n        \"bandwidth_usage_mbps\":51,\n        \"active_devices\":11,\n        \"latency_ms\":21\n    },\n    {\n        \"timestamp\":1738368120000,\n        \"bandwidth_usage_mbps\":52,\n        \"active_devices\":12,\n        \"latency_ms\":22\n    },\n    {\n        \"timestamp\":1738368180000,\n        \"bandwidth_usage_mbps\":53,\n        \"active_devices\":13,\n        \"latency_ms\":23\n    },\n    {\n        \"timestamp\":1738368240000,\n        \"bandwidth_usage_mbps\":54,\n        \"active_devices\":14,\n        \"latency_ms\":24\n    },\n    {\n        \"timestamp\":1738368300000,\n        \"bandwidth_usage_mbps\":55,\n        \"active_devices\":10,\n        \"latency_ms\":25\n    },\n    {\n        \"timestamp\":1738368360000,\n        \"bandwidth_usage_mbps\":56,\n        \"active_devices\":11,\n        \"latency_ms\":26\n    },\n    {\n        \"timestamp\":1738368420000,\n        \"bandwidth_usage_mbps\":57,\n        \"active_devices\":12,\n        \"latency_ms\":20\n    },\n    {\n        \"timestamp\":1738368480000,\n        \"bandwidth_usage_mbps\":58,\n        \"active_devices\":13,\n        \"latency_ms\":21\n    },\n    {\n        \"timestamp\":1738368540000,\n        \"bandwidth_usage_mbps\":59,\n        \"active_devices\":14,\n        \"latency_ms\":22\n    },\n    {\n        \"timestamp\":1738368600000,\n        \"bandwidth_usage_mbps\":50,\n        \"active_devices\":10,\n        \"latency_ms\":23\n    },\n    {\n        \"timestamp\":1738368660000,\n        \"bandwidth_usage_mbps\":51,\n        \"active_devices\":11,\n        \"latency_ms\":24\n    },\n    {\n        \"timestamp\":1738368720000,\n        \"bandwidth_usage_mbps\":52,\n        \"active_devices\":12,\n        \"latency_ms\":25\n    },\n    {\n        \"timestamp\":1738368780000,\n        \"bandwidth_usage_mbps\":53,\n        \"active_devices\":13,\n        \"latency_ms\":26\n    },\n    {\n        \"timestamp\":1738368840000,\n        \"bandwidth_usage_mbps\":54,\n        \"active_devices\":14,\n        \"latency_ms\":20\n    },\n    {\n        \"timestamp\":1738368900000,\n        \"bandwidth_usage_mbps\":55,\n        \"active_devices\":10,\n        \"latency_ms\":21\n    },\n    {\n        \"timestamp\":1738368960000,\n        \"bandwidth_usage_mbps\":56,\n        \"active_devices\":11,\n        \"latency_ms\":22\n    },\n    {\n        \"timestamp\":1738369020000,\n        \"bandwidth_usage_mbps\":57,\n        \"active_devices\":12,\n        \"latency_ms\":23\n    },\n    {\n        \"timestamp\":1738369080000,\n        \"bandwidth_usage_mbps\":58,\n        \"active_devices\":13,\n        \"latency_ms\":24\n    },\n    {\n        \"timestamp\":1738369140000,\n        \"bandwidth_usage_mbps\":59,\n        \"active_devices\":14,\n        \"latency_ms\":25\n    },\n    {\n        \"timestamp\":1738369200000,\n        \"bandwidth_usage_mbps\":50,\n        \"active_devices\":10,\n        \"latency_ms\":26\n    },\n    {\n        \"timestamp\":1738369260000,\n        \"bandwidth_usage_mbps\":51,\n        \"active_devices\":11,\n        \"latency_ms\":20\n    },\n    {\n        \"timestamp\":1738369320000,\n        \"bandwidth_usage_mbps\":52,\n        \"active_devices\":12,\n        \"latency_ms\":21\n    },\n    {\n        \"timestamp\":1738369380000,\n        \"bandwidth_usage_mbps\":53,\n        \"active_devices\":13,\n        \"latency_ms\":22\n    },\n    {\n        \"timestamp\":1738369440000,\n        \"bandwidth_usage_mbps\":54,\n        \"active_devices\":14,\n        \"latency_ms\":23\n    },\n    {\n        \"timestamp\":1738369500000,\n        \"bandwidth_usage_mbps\":55,\n        \"active_devices\":10,\n        \"latency_ms\":24\n    },\n    {\n        \"timestamp\":1738369560000,\n        \"bandwidth_usage_mbps\":56,\n        \"active_devices\":11,\n        \"latency_ms\":25\n    },\n    {\n        \"timestamp\":1738369620000,\n        \"bandwidth_usage_mbps\":57,\n        \"active_devices\":12,\n        \"latency_ms\":26\n    },\n    {\n        \"timestamp\":1738369680000,\n        \"bandwidth_usage_mbps\":58,\n        \"active_devices\":13,\n        \"latency_ms\":20\n    },\n    {\n        \"timestamp\":1738369740000,\n        \"bandwidth_usage_mbps\":59,\n        \"active_devices\":14,\n        \"latency_ms\":21\n    },\n    {\n        \"timestamp\":1738369800000,\n        \"bandwidth_usage_mbps\":50,\n        \"active_devices\":10,\n        \"latency_ms\":22\n    },\n    {\n        \"timestamp\":1738369860000,\n        \"bandwidth_usage_mbps\":51,\n        \"active_devices\":11,\n        \"latency_ms\":23\n    },\n    {\n        \"timestamp\":1738369920000,\n        \"bandwidth_usage_mbps\":52,\n        \"active_devices\":12,\n        \"latency_ms\":24\n    },\n    {\n        \"timestamp\":1738369980000,\n        \"bandwidth_usage_mbps\":53,\n        \"active_devices\":13,\n        \"latency_ms\":25\n    },\n    {\n        \"timestamp\":1738370040000,\n        \"bandwidth_usage_mbps\":54,\n        \"active_devices\":14,\n        \"latency_ms\":26\n    },\n    {\n        \"timestamp\":1738370100000,\n        \"bandwidth_usage_mbps\":55,\n        \"active_devices\":10,\n        \"latency_ms\":20\n    },\n    {\n        \"timestamp\":1738370160000,\n        \"bandwidth_usage_mbps\":56,\n        \"active_devices\":11,\n        \"latency_ms\":21\n    },\n    {\n        \"timestamp\":1738370220000,\n        \"bandwidth_usage_mbps\":57,\n        \"active_devices\":12,\n        \"latency_ms\":22\n    },\n    {\n        \"timestamp\":1738370280000,\n        \"bandwidth_usage_mbps\":58,\n        \"active_devices\":13,\n        \"latency_ms\":23\n    },\n    {\n        \"timestamp\":1738370340000,\n        \"bandwidth_usage_mbps\":59,\n        \"active_devices\":14,\n        \"latency_ms\":24\n    },\n    {\n        \"timestamp\":1738370400000,\n        \"bandwidth_usage_mbps\":50,\n        \"active_devices\":10,\n        \"latency_ms\":25\n    },\n    {\n        \"timestamp\":1738370460000,\n        \"bandwidth_usage_mbps\":51,\n        \"active_devices\":11,\n        \"latency_ms\":26\n    },\n    {\n        \"timestamp\":1738370520000,\n        \"bandwidth_usage_mbps\":52,\n        \"active_devices\":12,\n        \"latency_ms\":20\n    },\n    {\n        \"timestamp\":1738370580000,\n        \"bandwidth_usage_mbps\":53,\n        \"active_devices\":13,\n        \"latency_ms\":21\n    },\n    {\n        \"timestamp\":1738370640000,\n        \"bandwidth_usage_mbps\":54,\n        \"active_devices\":14,\n        \"latency_ms\":22\n    },\n    {\n        \"timestamp\":1738370700000,\n        \"bandwidth_usage_mbps\":55,\n        \"active_devices\":10,\n        \"latency_ms\":23\n    },\n    {\n        \"timestamp\":1738370760000,\n        \"bandwidth_usage_mbps\":56,\n        \"active_devices\":11,\n        \"latency_ms\":24\n    },\n    {\n        \"timestamp\":1738370820000,\n        \"bandwidth_usage_mbps\":57,\n        \"active_devices\":12,\n        \"latency_ms\":25\n    },\n    {\n        \"timestamp\":1738370880000,\n        \"bandwidth_usage_mbps\":58,\n        \"active_devices\":13,\n        \"latency_ms\":26\n    },\n    {\n        \"timestamp\":1738370940000,\n        \"bandwidth_usage_mbps\":59,\n        \"active_devices\":14,\n        \"latency_ms\":20\n    }\n]",
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "${DS_YESOREYERAM-INFINITY-DATASOURCE}"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "",
+          "source": "inline",
+          "type": "json",
+          "url": "",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Network usuage",
+      "type": "heatmap"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "${DS_MYSQL-3}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 12,
+        "x": 0,
+        "y": 11
+      },
+      "id": 7,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.5.1",
+      "targets": [
+        {
+          "dataset": "dashboard",
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT DATE(response_start_time) AS date, AVG(response_duration) AS avg_response_time\r\nFROM incident_response_times\r\nGROUP BY DATE(response_start_time);\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "datasource": {
+            "type": "mysql",
+            "uid": "${DS_MYSQL-3}"
+          }
+        }
+      ],
+      "title": "Response time alert",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "${DS_MYSQL-3}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "gauge"
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "status"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "Available": {
+                        "color": "dark-green",
+                        "index": 0
+                      },
+                      "En Route": {
+                        "color": "semi-dark-yellow",
+                        "index": 1
+                      },
+                      "Idle": {
+                        "color": "#4546422b",
+                        "index": 3
+                      },
+                      "Responding": {
+                        "color": "semi-dark-blue",
+                        "index": 2
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 12,
+        "x": 12,
+        "y": 11
+      },
+      "id": 3,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "11.5.1",
+      "targets": [
+        {
+          "dataset": "dashboard",
+          "datasource": {
+            "type": "mysql",
+            "uid": "${DS_MYSQL-3}"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT resource_type, status, eta\r\nFROM resources;\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": " Resource Allocation",
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "${DS_YESOREYERAM-INFINITY-DATASOURCE}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-BlYlRd"
+          },
+          "custom": {
+            "axisBorderShow": true,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "hue",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "fieldMinMax": false,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "severity"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "high": {
+                        "color": "semi-dark-red",
+                        "index": 2
+                      },
+                      "low": {
+                        "color": "light-green",
+                        "index": 0
+                      },
+                      "medium": {
+                        "color": "light-orange",
+                        "index": 1
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 24,
+        "x": 0,
+        "y": 15
+      },
+      "id": 8,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.97,
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "orientation": "auto",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "11.5.1",
+      "targets": [
+        {
+          "columns": [],
+          "data": "[\n    {\n        \"timestamp\":1738368000000,\n        \"alert_type\":\"Network Down\",\n        \"severity\":\"Critical\",\n        \"location\":\"Region A\"\n    },\n    {\n        \"timestamp\":1738371600000,\n        \"alert_type\":\"High Latency\",\n        \"severity\":\"High\",\n        \"location\":\"Region B\"\n    },\n    {\n        \"timestamp\":1738375200000,\n        \"alert_type\":\"Unauthorized Access\",\n        \"severity\":\"Medium\",\n        \"location\":\"Region C\"\n    },\n    {\n        \"timestamp\":1738378800000,\n        \"alert_type\":\"Device Overload\",\n        \"severity\":\"Low\",\n        \"location\":\"Region D\"\n    },\n    {\n        \"timestamp\":1738382400000,\n        \"alert_type\":\"Network Down\",\n        \"severity\":\"Critical\",\n        \"location\":\"Region A\"\n    },\n    {\n        \"timestamp\":1738386000000,\n        \"alert_type\":\"High Latency\",\n        \"severity\":\"High\",\n        \"location\":\"Region B\"\n    },\n    {\n        \"timestamp\":1738389600000,\n        \"alert_type\":\"Unauthorized Access\",\n        \"severity\":\"Medium\",\n        \"location\":\"Region C\"\n    },\n    {\n        \"timestamp\":1738393200000,\n        \"alert_type\":\"Device Overload\",\n        \"severity\":\"Low\",\n        \"location\":\"Region D\"\n    },\n    {\n        \"timestamp\":1738396800000,\n        \"alert_type\":\"Data Breach\",\n        \"severity\":\"Critical\",\n        \"location\":\"Region E\"\n    },\n    {\n        \"timestamp\":1738400400000,\n        \"alert_type\":\"Service Restored\",\n        \"severity\":\"Info\",\n        \"location\":\"HQ\"\n    }\n]",
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "${DS_YESOREYERAM-INFINITY-DATASOURCE}"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "",
+          "source": "inline",
+          "type": "json",
+          "url": "",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "alerts",
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "${DS_MYSQL-3}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineWidth": 1,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "alert_type"
+            },
+            "properties": []
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 12,
+        "x": 0,
+        "y": 21
+      },
+      "id": 4,
+      "options": {
+        "barRadius": 0,
+        "barWidth": 0.91,
+        "colorByField": "alert_type",
+        "fullHighlight": false,
+        "groupWidth": 0.7,
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "orientation": "horizontal",
+        "showValue": "auto",
+        "stacking": "none",
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        },
+        "xTickLabelRotation": 0,
+        "xTickLabelSpacing": 0
+      },
+      "pluginVersion": "11.5.1",
+      "targets": [
+        {
+          "dataset": "dashboard",
+          "datasource": {
+            "type": "mysql",
+            "uid": "${DS_MYSQL-3}"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT date, alert_type, alert_count\r\nFROM analytics;\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Incident Trends ",
+      "type": "barchart"
+    },
+    {
+      "datasource": {
+        "type": "yesoreyeram-infinity-datasource",
+        "uid": "${DS_YESOREYERAM-INFINITY-DATASOURCE}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "continuous-YlRd"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "fieldMinMax": false,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 12,
+        "y": 21
+      },
+      "id": 11,
+      "options": {
+        "basemap": {
+          "config": {},
+          "name": "Layer 0",
+          "type": "default"
+        },
+        "controls": {
+          "mouseWheelZoom": true,
+          "showAttribution": true,
+          "showDebug": false,
+          "showMeasure": false,
+          "showScale": false,
+          "showZoom": true
+        },
+        "layers": [
+          {
+            "config": {
+              "nightColor": "#a7a6ba4D",
+              "show": "to",
+              "sun": true
+            },
+            "location": {
+              "mode": "auto"
+            },
+            "name": "Layer 1",
+            "tooltip": true,
+            "type": "dayNight"
+          }
+        ],
+        "tooltip": {
+          "mode": "details"
+        },
+        "view": {
+          "allLayers": true,
+          "id": "e-asia",
+          "lat": 33,
+          "lon": 120,
+          "shared": false,
+          "zoom": 3.99
+        }
+      },
+      "pluginVersion": "11.5.1",
+      "targets": [
+        {
+          "columns": [],
+          "data": "[\n    {\n        \"timestamp\":1738368000000,\n        \"connected_smartphones\":30,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368060000,\n        \"connected_smartphones\":31,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368120000,\n        \"connected_smartphones\":32,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368180000,\n        \"connected_smartphones\":33,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368240000,\n        \"connected_smartphones\":34,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368300000,\n        \"connected_smartphones\":35,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368360000,\n        \"connected_smartphones\":36,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368420000,\n        \"connected_smartphones\":37,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368480000,\n        \"connected_smartphones\":38,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368540000,\n        \"connected_smartphones\":39,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368600000,\n        \"connected_smartphones\":30,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368660000,\n        \"connected_smartphones\":31,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368720000,\n        \"connected_smartphones\":32,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368780000,\n        \"connected_smartphones\":33,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368840000,\n        \"connected_smartphones\":34,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368900000,\n        \"connected_smartphones\":35,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738368960000,\n        \"connected_smartphones\":36,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369020000,\n        \"connected_smartphones\":37,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369080000,\n        \"connected_smartphones\":38,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369140000,\n        \"connected_smartphones\":39,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369200000,\n        \"connected_smartphones\":30,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369260000,\n        \"connected_smartphones\":31,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369320000,\n        \"connected_smartphones\":32,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369380000,\n        \"connected_smartphones\":33,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369440000,\n        \"connected_smartphones\":34,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369500000,\n        \"connected_smartphones\":35,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369560000,\n        \"connected_smartphones\":36,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369620000,\n        \"connected_smartphones\":37,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369680000,\n        \"connected_smartphones\":38,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369740000,\n        \"connected_smartphones\":39,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369800000,\n        \"connected_smartphones\":30,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369860000,\n        \"connected_smartphones\":31,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369920000,\n        \"connected_smartphones\":32,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738369980000,\n        \"connected_smartphones\":33,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370040000,\n        \"connected_smartphones\":34,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370100000,\n        \"connected_smartphones\":35,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370160000,\n        \"connected_smartphones\":36,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370220000,\n        \"connected_smartphones\":37,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370280000,\n        \"connected_smartphones\":38,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370340000,\n        \"connected_smartphones\":39,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370400000,\n        \"connected_smartphones\":30,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370460000,\n        \"connected_smartphones\":31,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370520000,\n        \"connected_smartphones\":32,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370580000,\n        \"connected_smartphones\":33,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370640000,\n        \"connected_smartphones\":34,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370700000,\n        \"connected_smartphones\":35,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370760000,\n        \"connected_smartphones\":36,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370820000,\n        \"connected_smartphones\":37,\n        \"connected_mesh_nodes\":7,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370880000,\n        \"connected_smartphones\":38,\n        \"connected_mesh_nodes\":5,\n        \"connected_satellites\":1\n    },\n    {\n        \"timestamp\":1738370940000,\n        \"connected_smartphones\":39,\n        \"connected_mesh_nodes\":6,\n        \"connected_satellites\":1\n    }\n]",
+          "datasource": {
+            "type": "yesoreyeram-infinity-datasource",
+            "uid": "${DS_YESOREYERAM-INFINITY-DATASOURCE}"
+          },
+          "filters": [],
+          "format": "table",
+          "global_query_id": "",
+          "refId": "A",
+          "root_selector": "",
+          "source": "inline",
+          "type": "json",
+          "url": "",
+          "url_options": {
+            "data": "",
+            "method": "GET"
+          }
+        }
+      ],
+      "title": "Geolocation",
+      "type": "geomap"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "${DS_MYSQL-3}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "decimals": 1,
+          "fieldMinMax": false,
+          "mappings": []
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "status"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "Available": {
+                        "color": "semi-dark-green",
+                        "index": 0
+                      },
+                      "On Route": {
+                        "color": "semi-dark-yellow",
+                        "index": 1
+                      },
+                      "Unavailable": {
+                        "color": "semi-dark-red",
+                        "index": 2
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 6,
+        "x": 0,
+        "y": 26
+      },
+      "id": 6,
+      "options": {
+        "displayLabels": [
+          "percent"
+        ],
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true,
+          "values": [
+            "percent"
+          ]
+        },
+        "pieType": "pie",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/^count$/",
+          "values": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "11.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "${DS_MYSQL-3}"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT status, COUNT(*) AS count\r\nFROM responders\r\nGROUP BY status;\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Responder Status",
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "${DS_MYSQL-3}"
+      },
+      "gridPos": {
+        "h": 3,
+        "w": 6,
+        "x": 6,
+        "y": 26
+      },
+      "id": 2,
+      "options": {
+        "dedupStrategy": "none",
+        "enableInfiniteScrolling": false,
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": false,
+        "showTime": false,
+        "sortOrder": "Descending",
+        "wrapLogMessage": false
+      },
+      "pluginVersion": "11.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "mysql",
+            "uid": "${DS_MYSQL-3}"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT timestamp, message, responder_name, status\r\nFROM communications;\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          }
+        }
+      ],
+      "title": "Communication log",
+      "type": "logs"
+    },
+    {
+      "datasource": {
+        "type": "mysql",
+        "uid": "${DS_MYSQL-3}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "fixed"
+          },
+          "custom": {
+            "align": "left",
+            "cellOptions": {
+              "type": "color-text"
+            },
+            "inspect": false
+          },
+          "mappings": [
+            {
+              "options": {
+                "critical": {
+                  "color": "semi-dark-red",
+                  "index": 0
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 0.0001
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "severity_level"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "Critical": {
+                        "color": "dark-red",
+                        "index": 0
+                      },
+                      "High": {
+                        "color": "dark-orange",
+                        "index": 1
+                      },
+                      "Low": {
+                        "color": "dark-green",
+                        "index": 3
+                      },
+                      "Moderate": {
+                        "color": "semi-dark-yellow",
+                        "index": 2
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "verification_status"
+            },
+            "properties": [
+              {
+                "id": "mappings",
+                "value": [
+                  {
+                    "options": {
+                      "Pending": {
+                        "color": "dark-yellow",
+                        "index": 0
+                      },
+                      "Rejected": {
+                        "color": "dark-red",
+                        "index": 2
+                      },
+                      "Verified": {
+                        "color": "dark-green",
+                        "index": 1
+                      }
+                    },
+                    "type": "value"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 18,
+        "x": 6,
+        "y": 29
+      },
+      "id": 1,
+      "options": {
+        "cellHeight": "sm",
+        "footer": {
+          "countRows": false,
+          "fields": "",
+          "reducer": [
+            "sum"
+          ],
+          "show": false
+        },
+        "showHeader": true
+      },
+      "pluginVersion": "11.5.1",
+      "targets": [
+        {
+          "dataset": "dashboard",
+          "datasource": {
+            "type": "mysql",
+            "uid": "${DS_MYSQL-3}"
+          },
+          "editorMode": "code",
+          "format": "table",
+          "rawQuery": true,
+          "rawSql": "SELECT alert_id, alert_time, signal_type, severity_level, sender_name, verification_status\r\nFROM sigalert;\r\n",
+          "refId": "A",
+          "sql": {
+            "columns": [
+              {
+                "parameters": [],
+                "type": "function"
+              }
+            ],
+            "groupBy": [
+              {
+                "property": {
+                  "type": "string"
+                },
+                "type": "groupBy"
+              }
+            ],
+            "limit": 50
+          },
+          "table": "sigalert"
+        }
+      ],
+      "title": "real time",
+      "type": "table"
+    }
+  ],
+  "refresh": "",
+  "schemaVersion": 40,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "-043910-09-06T06:03:22.268Z",
+    "to": "+047959-08-07T06:03:22.268Z"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "New dashboard",
+  "uid": "eedfsb7y02ewwa",
+  "version": 26,
+  "weekStart": ""
+}

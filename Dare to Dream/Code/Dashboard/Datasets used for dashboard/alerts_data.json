@@ -1,0 +1,62 @@
+[
+    {
+        "timestamp":1738368000000,
+        "alert_type":"Network Down",
+        "severity":"Critical",
+        "location":"Region A"
+    },
+    {
+        "timestamp":1738371600000,
+        "alert_type":"High Latency",
+        "severity":"High",
+        "location":"Region B"
+    },
+    {
+        "timestamp":1738375200000,
+        "alert_type":"Unauthorized Access",
+        "severity":"Medium",
+        "location":"Region C"
+    },
+    {
+        "timestamp":1738378800000,
+        "alert_type":"Device Overload",
+        "severity":"Low",
+        "location":"Region D"
+    },
+    {
+        "timestamp":1738382400000,
+        "alert_type":"Network Down",
+        "severity":"Critical",
+        "location":"Region A"
+    },
+    {
+        "timestamp":1738386000000,
+        "alert_type":"High Latency",
+        "severity":"High",
+        "location":"Region B"
+    },
+    {
+        "timestamp":1738389600000,
+        "alert_type":"Unauthorized Access",
+        "severity":"Medium",
+        "location":"Region C"
+    },
+    {
+        "timestamp":1738393200000,
+        "alert_type":"Device Overload",
+        "severity":"Low",
+        "location":"Region D"
+    },
+    {
+        "timestamp":1738396800000,
+        "alert_type":"Data Breach",
+        "severity":"Critical",
+        "location":"Region E"
+    },
+    {
+        "timestamp":1738400400000,
+        "alert_type":"Service Restored",
+        "severity":"Info",
+        "location":"HQ"
+    }
+]

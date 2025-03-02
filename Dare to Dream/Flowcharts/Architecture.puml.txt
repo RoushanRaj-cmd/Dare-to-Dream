@@ -1,0 +1,82 @@
+@startuml
+title Emergency Communication and Content Regulation System (ECCRS)
+skinparam monochrome true
+skinparam dpi 300
+skinparam linetype ortho
+
+legend left
+  | *Component*              | *Symbol* |
+  | Command Center             | 🏢 |
+  | Law Enforcement HQ         | 🏛 |
+  | Relief Agencies            | 🚑 |
+  | Field Units (Police, Rescue)| 🚓 🚒 |
+  | Citizen Devices            | 📱 |
+  | Microwave Links            | 📡 |
+  | VSAT Backup                | 🛰 |
+  | Mesh Network (TP-Link CPE610) | 🔄 |
+  | Cell-on-Wheels (CoWs)       | 📶 |
+endlegend
+
+node "Command & Control Center 🏢" as Command {
+  [Emergency Operations] 
+  [Data Processing] 
+  [Live Video & Alerts]
+}
+
+node "Law Enforcement HQ 🏛" as HQ {
+  [Main Communication Hub] 
+  [Monitoring Center]
+}
+
+node "Relief Agencies 🚑" as Relief {
+  [Medical Support] 
+  [Evacuation Coordination]
+}
+
+node "Field Units 🚓 🚒" as Field {
+  [Police & Rescue Teams] 
+  [First Responders]
+}
+
+node "Citizen Devices 📱" as Citizens {
+  [SafeAlert App] 
+  [Emergency Alerts & Reports]
+}
+
+node "Microwave Link 📡 (50 km LoS)" as Microwave {
+  [Primary Backbone] 
+  [High-speed Data Transfer]
+}
+
+node "VSAT Backup 🛰" as VSAT {
+  [Satellite Link] 
+  [Emergency Backup]
+}
+
+node "Mesh Network 🔄 (5-10 km range)" as Mesh {
+  [TP-Link Pharos CPE610] 
+  [Local Communication]
+}
+
+node "Cell-on-Wheels 📶" as CoWs {
+  [5G Microcells] 
+  [Emergency Coverage]
+}
+
+Command -[hidden]-> HQ
+HQ -down-> Microwave : "Primary Communication (1 Gbps)"
+HQ -down-> VSAT : "Backup Link (Slower)"
+
+Microwave -down-> Field : "Microwave Link (if in range)"
+VSAT -down-> Field : "Backup Communication"
+
+Field -down-> Mesh : "Mesh Network (Portable Routers)"
+Mesh -down-> CoWs : "Extended Coverage"
+
+Mesh -right-> Citizens : "SafeAlert App (Text, Image, Voice)"
+CoWs -right-> Citizens : "Limited Internet Access"
+
+Citizens -up-> Field : "Emergency Alerts (Verified)"
+Field -up-> Command : "Response Coordination"
+
+@enduml

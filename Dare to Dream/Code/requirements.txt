@@ -1,0 +1,17 @@
+numpy
+pandas
+matplotlib
+seaborn
+scipy
+sklearn
+tensorflow
+torch
+cryptography
+pycryptodome
+flask
+grafana-api
+sqlalchemy
+mysql-connector-python
+psycopg2
+jupyter
+plantuml
